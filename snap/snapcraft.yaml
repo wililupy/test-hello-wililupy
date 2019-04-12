@@ -1,0 +1,27 @@
+name: test-hello-wililupy
+base: core18 
+version: '2.10' 
+summary: Test Hello World snap
+description: |
+  Test Hello World snap made by wililupy
+
+grade: stable
+confinement: strict
+
+apps:
+  hello:
+    command: bin/hello
+  bash:
+    command: bash
+    plugs: 
+      - home
+
+parts:
+  hello:
+    plugin: autotools
+    source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
+  bash:
+    plugin: autotools
+    source: http://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz
+    configflags: ["--infodir=/var/bash/info"]
+
