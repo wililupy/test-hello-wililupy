@@ -3,7 +3,7 @@ base: core18
 version: '2.10' 
 summary: Test Hello World snap
 description: |
-  Test Hello World snap made by wililupy
+  Test Hello World snap made by wililupy. It's cool
 
 grade: stable
 confinement: strict
